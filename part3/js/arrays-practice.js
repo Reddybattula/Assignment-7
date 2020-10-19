@@ -22,7 +22,7 @@ movies[1] = "Geetha govindam";
 movies[2] = "Nuvvastanante nenoddnatana";
 movies[3] = "Yagnam";
 movies[4] = "Ready";
-movies.splice(3, 0, "Indra");
+movies.splice(2, 0, "Indra");
 window.console.log(movies.length);
 window.console.log("\n");
 
