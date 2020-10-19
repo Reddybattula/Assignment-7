@@ -4,7 +4,7 @@ var sq;
 var percent;
 var modu;
 var nlist;
-var total;
+
  
 //STEP 1
 function halfNumber(num) {
@@ -37,15 +37,21 @@ function findModulus(num1, num2) {
     return modu;
 }
 //STEP 5
-function sum(numbers) {
+function sum() {
     "use strict";
     var i;
+    var total=0;
+    var str = window.prompt("Enter the numbers separated by commas to add");
+    var numbers = str.split(",");
+    for (i=0; i<numbers.length; i++) {
+    numbers[i] = parseInt(numbers[i], 10);
+    }
     
     for(i=0; i<numbers.length; i++) {
-        total = total + numbers[i];
+        total = total + Number(numbers[i]);
         window.console.log(numbers[i]);
     }
-    return total;
+    window.console.log(total + " is the sum of all numbers");
   
 }
 
@@ -60,16 +66,7 @@ function main() {
     window.console.log("2 is " + percentRes + "% of 4.");
     var moduRes = findModulus(4,10);
     window.console.log(moduRes + " is the modulus of 4 and 10.");
-    var str = window.prompt("Enter the numbers separated by commas to add");
-    var numbers = str.split(",");
-    for (i=0; i<numbers.length; i++) {
-    numbers[i] = parseInt(numbers[i], 10);
-    }
-    window.console.log(numbers);
-    
-    var sumRes = sum(numbers);
-    window.console.log(sumRes + " is the sum of all numbers");
-    
+    sum();
     
 }
 
